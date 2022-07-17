@@ -1,0 +1,96 @@
+/*  
+    Damiens' Hairdressing
+    Ronan Goligy
+    2021
+    Nav.scss
+*/
+
+@import 'Variables.scss';
+
+#Nav {
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    height: 15%;
+    background-color: $black;
+    display: flex;
+    flex-direction :row;
+    justify-content: space-between;
+
+img{
+    width: 25rem;
+    margin-top: 10%;
+    order: 1;
+}
+
+#Nav-Links{
+    width: 30%;
+    list-style: none;
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 5rem;
+
+    #ContactBtn, #PricelistBtn {
+        width: 130%;
+        height: 60%;
+        border: none;
+        background-color: $black;
+        color: $white;
+        outline: none;
+        margin: 0 40%;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    #ContactBtn{
+        order: 2;
+    }
+    #PricelistBtn {
+        order: 3;
+        border: 2px solid $white;
+        border-radius: 9999px;
+    }
+
+    #ContactBtn:hover, #ContactBtn:focus{
+        background-color: $black;
+        color: $grey;
+        
+    }
+
+    #PricelistBtn:hover, #PricelistBtn:focus{
+        background-color: $black;
+        color: $grey;
+        border: 2px solid $grey;
+    }
+}
+
+}
+
+@media only screen and (max-width: 460px){
+
+    #Nav{
+        height: 20%;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        img{
+            margin-top: 2%;
+        }
+
+        #Nav-Links{
+            width: 40%;
+            flex-direction: column;
+            margin: -10% 0 0 0 ;
+
+           #PricelistBtn {
+               border: none;
+              
+            }
+        }
+    }
+
+}
