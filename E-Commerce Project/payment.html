@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/08229a6deb.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+        <link rel="stylesheet" href="Style/payment.css">
+    </head>
+    <body>
+      
+        
+            <section class="container">
+            
+                <form method="POST" action="" class="customer-info">
+                    <button  class="back-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="progress-bar">
+                        <div class="progress-done"></div>
+                    </div>
+
+                    <div class="form-step1">
+                        <h1>Delivery Information</h1>
+                    
+                        <div class="formElement">
+                            <input  id="email" class="email" type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="formElement-short">
+                            <input  id="fname" class="fname" type="text" name="fname" placeholder="First Name">
+                        </div>
+                        <div class="formElement-short">
+                            <input  id="lname"class="lname" type="text" name="lname" placeholder="Last Name">
+                        </div>
+                        <div class="formElement">
+                            <input  id="company" class="company"type="text" name="company" placeholder="Company (Optional)">
+                        </div>
+                        <div class="formElement">
+                            <input  id="street" class="street" type="text" name="street" placeholder="Address">
+                        </div>
+                        <div class="formElement">
+                            <input id="city" class="city" type="text" name="city" placeholder="City">
+                        </div>
+                        <div class="formElement">
+                            <input id="postcode" class="postcode" type="text" name="postcode" placeholder="Post code">
+                        </div>
+                        <div class="formElement">
+                            <input id="phone" class="phone" type="text" name="phone" placeholder="Phone Number">
+                        </div>
+                       
+                        
+                        
+                        
+                        
+                        
+                        
+        
+        
+                        <button Class="payment-details">Next</button>
+                    </div>
+
+                    <div class="form-step2">
+                        <h1>Payment Information</h1>
+                        <h3>Name On Card</h3>
+                        <div class="formElement">
+                            <input  id="cardName" class="cardName" type="text" name="cardName" placeholder="Name on Card">
+                        </div>
+                       
+                        <h3>Card Number</h3>
+                        <div class="formElement">
+                            <input  id="cardNum" class="cardNum" type="text" name="cardNum" placeholder="Number on card">
+                        </div>
+                        
+                        <h3>Expiry</h3>
+                        <div class="formElement">
+                            <input id="month" class="month" type="text" name="Month">
+                        </div>
+                      
+                        <h3>CVV</h3>
+                        <div class="formElement">
+                            <input  id="CVV" class="CVV" type="text" name="CVV" placeholder="***">
+                        </div>
+                       
+                    </div>
+                 
+    
+    
+                
+                </form>
+    
+            </section>
+    
+    
+    
+            <aside class="order-summary">
+    
+                <div class="product-order" id="product-order">
+                  
+    
+                </div>
+    
+                <form class="discount">
+                 <input class="code" type="text" name="code" placeholder="Discount Code">
+                 <button class="apply">Apply</button>
+                </form>
+    
+                <div class="breakdown">
+                    <h3 class="shipping"><span>Shipping: £4.99 </span></h3>
+                    <h3 class="subtotal"><span>Subtotal: £0.00 </span></h3>
+                </div>
+                
+                <h2 class="total"><span>Total: £0.00 </span></h2>
+                
+                <button class="submit">Submit Order</button>
+            </aside>
+
+        
+      
+        <section class="confirmation-modal">
+            <div class="confirmation-msg">
+                <h3>Order Confirmation   Order Num: #876876</h3>
+                <p>Your has been placed! We've send your receipt by email</p>
+            </div>
+            <button class="back">back</button>
+            
+        </section>
+        <script src="Js/payments.js" async defer></script>
+    </body>
+</html>

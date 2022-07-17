@@ -1,0 +1,524 @@
+@import "variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 14000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+  @media (min-width: 600px) {
+    height: 3200px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .add {
+    width: 6rem;
+    height: 2.5rem;
+    background-color: white;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .add.show {
+    background-color: #52b783;
+    border: 1px solid #52b783;
+    color: white;
+  }
+
+  .product-card {
+    // border: 2px solid blue;
+    width: 14rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 2rem;
+    position: relative;
+
+    @media (min-width: 600px) {
+      width: 14rem;
+      height: 20rem;
+    }
+
+    .product-img {
+      order: 1;
+      width: 100%;
+      height: 70%;
+    }
+    .product-desc {
+      order: 2;
+      padding: 0.5rem 0.5rem;
+    }
+    .product-price {
+      order: 3;
+      position: relative;
+      bottom: 2%;
+      padding: 0.5rem 0.5rem;
+    }
+    .addFav {
+      position: absolute;
+      background-color: white;
+      border: none;
+      outline: none;
+      bottom: 2%;
+      right: 55%;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      color: black;
+    }
+
+    .addFav.show {
+      color: red;
+    }
+    /*
+    .add {
+      width: 6rem;
+      height: 2.5rem;
+      background-color: white;
+      border: 1px solid black;
+      outline: none;
+      cursor: pointer;
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .add.show {
+      background-color: #52b783;
+      border: 1px solid #52b783;
+      color: white;
+    }
+    */
+  }
+
+  .nav {
+    width: 100%;
+    height: 6%;
+    background-color: $white;
+    order: 1;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    .hamburger {
+      width: 1.8rem;
+      height: 1.8rem;
+      position: absolute;
+      top: 10%;
+      left: 2%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: inherit;
+
+      i {
+        font-size: 1.5rem;
+        color: $grey;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    .title {
+      position: absolute;
+      top: 15%;
+      left: 46%;
+      font-size: 1.5rem;
+      letter-spacing: 0.3rem;
+    }
+    .mobile-container {
+      width: 100%;
+      height: 500%;
+      background-color: #fff;
+      display: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      z-index: 1;
+      transition: all 9ms ease-in;
+
+      #exit {
+        position: absolute;
+        top: 10%;
+        right: 3%;
+        cursor: pointer;
+        font-size: 1.4rem;
+
+        &:hover {
+          color: $grey;
+        }
+      }
+
+      .menu-list {
+        margin: 0 auto;
+        list-style: none;
+        line-height: 170%;
+        font-size: 1.2rem;
+        color: #000;
+
+        a {
+          text-decoration: none;
+          color: $black;
+        }
+
+        .sale {
+          color: red;
+        }
+      }
+    }
+
+    .mobile-container.show {
+      display: flex;
+    }
+
+    .option-icons {
+      position: absolute;
+      top: 15%;
+      right: 2%;
+      @media (min-width: 600px) {
+        width: 10%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      button {
+        width: 2rem;
+        height: 1.7rem;
+        background-color: inherit;
+        border: none;
+        outline: none;
+
+        @media (min-width: 600px) {
+          margin: 0 5% 0 5%;
+        }
+
+        i {
+          font-size: 1rem;
+          color: $grey;
+          cursor: pointer;
+
+          @media (min-width: 600px) {
+            font-size: 1.2rem;
+          }
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .shopping-cart {
+      width: 90%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: white;
+      z-index: 20;
+      display: none;
+      overflow: scroll;
+
+      @media (min-width: 600px) {
+        width: 20%;
+      }
+
+      .close-cart {
+        width: 4rem;
+        height: 2rem;
+        background-color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .cart {
+        width: 100%;
+        height: 18rem;
+        border-bottom: 1px solid grey;
+        margin: 12% 0 2% 0;
+        position: relative;
+
+        img {
+          width: 75%;
+          height: 60%;
+          margin: 0 0 0 12%;
+        }
+        h3 {
+          padding: 0.5rem 0.5rem;
+        }
+        p {
+          padding: 0.5rem 0.5rem;
+        }
+        .add {
+          top: 30%;
+        }
+      }
+
+      .checkout {
+        width: 8rem;
+        height: 2.5rem;
+        background-color: #52b783;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+      }
+    }
+
+    .shopping-cart.show {
+      display: inline;
+    }
+
+    .favourite-list {
+      width: 90%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: white;
+      z-index: 20;
+      display: none;
+      overflow: scroll;
+      //position: relative;
+
+      @media (min-width: 600px) {
+        width: 20%;
+      }
+      .close-fav {
+        width: 4rem;
+        height: 2rem;
+        background-color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .favourites {
+        width: 90%;
+        height: 99%;
+        position: absolute;
+        top: 5%;
+        left: 2%;
+      }
+
+      .fav {
+        width: 100%;
+        height: 18rem;
+        border-bottom: 1px solid grey;
+        margin: 0 0 2% 0;
+
+        img {
+          width: 75%;
+          height: 60%;
+          margin: 0 0 0 12%;
+        }
+        h3 {
+          padding: 0.5rem 0.5rem;
+        }
+        p {
+          padding: 0.5rem 0.5rem;
+        }
+        .add {
+          top: 30%;
+        }
+      }
+    }
+
+    .favourite-list.show {
+      display: inline;
+    }
+  }
+
+  .tops {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+
+    .tshirt-title {
+      position: absolute;
+      top: 0;
+      left: 5%;
+
+      @media (min-width: 600px) {
+        top: 5%;
+      }
+    }
+  }
+
+  .mens-intro {
+    width: 100%;
+    height: 30%;
+    background-image: url("../Images/Mens/pexels-antonio-sokic-3839432.jpg");
+    background-size: cover;
+  }
+  .jackets {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+    .jacket-title {
+      position: absolute;
+      top: 0;
+      left: 5%;
+
+      @media (min-width: 600px) {
+        top: 5%;
+      }
+    }
+  }
+  .shoes {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+
+    .shoe-title {
+      position: absolute;
+      top: 0;
+      left: 5%;
+
+      @media (min-width: 600px) {
+        top: 5%;
+      }
+    }
+  }
+
+  .accessories {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+
+    .accessorie-title {
+      position: absolute;
+      top: 0;
+      left: 5%;
+
+      @media (min-width: 600px) {
+        top: 5%;
+      }
+    }
+  }
+  .sale {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+
+    .sale-title {
+      position: absolute;
+      top: 0;
+      left: 5%;
+
+      @media (min-width: 600px) {
+        top: 5%;
+      }
+    }
+  }
+  .footer {
+    height: 4%;
+    background-color: $darkGrey;
+    order: 6;
+    display: flex;
+
+    .copy {
+      width: 100%;
+      margin: 20% auto;
+      color: #fff;
+      @media (min-width: 600px) {
+        margin: 2% 45%;
+      }
+
+      .footer-title {
+        letter-spacing: 0.2rem;
+        padding: 0 0.3rem 0 0;
+        @media (min-width: 600px) {
+          letter-spacing: 0.3rem;
+          padding: 0 0.7rem 0 0;
+        }
+      }
+    }
+  }
+}

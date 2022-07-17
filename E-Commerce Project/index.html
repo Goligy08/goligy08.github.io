@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://kit.fontawesome.com/08229a6deb.js" crossorigin="anonymous"></script>
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+        <link rel="stylesheet" href="Style/main.css">
+    </head>
+    <body>
+        <nav class="nav">
+
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+
+            <div class="mobile-container">
+                <i class="fas fa-times" id="exit"></i>
+                <ul class="menu-list">
+                    <a href="womens.html">
+                        <li>Women</li>
+                    </a>
+                    <a href="mens.html"> <li>Men</li></a>
+                   
+                </ul>
+            </div>
+         
+            <a href="index.html"><h1 class="title">OUTFIT</h1></a>
+           
+
+            <div class="option-icons">
+             <button class="favourites"><i class="fas fa-heart"></i></button>
+             <button class="basket"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </nav>
+
+        <section class="intro">
+            <div class="favourite-list">
+                <button class="close-fav">Close</button>
+            </div>
+            <div class="shopping-cart">
+                <button class="close-cart">Close</button>
+            </div>
+            <img class="intro1" src="Images/Homepage/laying-on-the-beach.jpg" alt="">
+            <img class="intro2" src="Images/Homepage/woman-playing-with-blonde-hair.jpg" alt="">
+            <h2 class="intro-left">End Of Season Sale</h2>
+            <h3 class="intro-left-sale">Up to 40% Off!</h3>
+            <button class="sale-button">SHOP SALE</button>
+
+            <h2 class="intro-right">New Season Styles</h2>
+            <button class="explore-button">SHOP NOW</button>
+        </section>
+
+        <section class="catagories">
+            <div class="cat-jeans">
+                <h2 class="title-jeans">Jeans</h2>
+            <img class="cat" src="Images/HomePage/lan-deng-quddu_dZKkQ-unsplash.jpg" alt="">
+           </div>
+
+            <div class="cat-knit">
+                <h2 class="title-knit">Knitwear</h2>
+                <img class="cat" src="Images/HomePage/pexels-daria-shevtsova-1030946.jpg" alt="">
+            </div>
+
+            <div class="cat-tshirts">
+                <h2 class="title-tshirts">T-Shirts</h2>
+                <img class="cat" src="Images/Homepage/kai-pilger-7YwWjgS7aJs-unsplash.jpg" alt="">
+            </div>
+
+            <div class="cat-jackets">
+                <h2 class="title-jackets">Jackets</h2>
+                <img class="cat" src="Images/Homepage/pexels-roman-pohorecki-16170.jpg" alt="">
+            </div>
+
+            <div class="cat-shoes">
+                <h2 class="title-shoes">Shoes</h2>
+                <img class="cat" src="Images/Homepage/black-sneakers-with-white-sole.jpg" alt="">
+            </div>
+
+            <div class="cat-sale">
+                <h2 class="title-sale">SALE</h2>
+                <img class="cat" src="Images/Homepage/pexels-artem-beliaikin-2292953.jpg" alt="">
+            </div>
+            
+            
+            
+            
+            
+            
+        </section>
+
+        <section class="featured">
+
+            <h2>FEATURED</h2>
+
+
+
+            <div class="cards">
+                <div class="feature-card">
+                    <img class="card-1" src="Images/Homepage/pexels-taryn-elliott-5405629.jpg" alt="">
+                </div>
+                <div class="feature-card">
+                    <img class="card-2" src="Images/Homepage/pexels-alleksana-4271568.jpg" alt="">
+                </div>
+                <div class="feature-card">
+                    <img class="card-3" src="Images/Homepage/woman-practicing-her-skincare-routine.jpg" alt="">
+                </div>
+            </div>
+         
+        </section>
+
+        <section class="Info">
+            <ul class="info-list">
+                <li>Company</li>
+                <li>About</li>
+                <li>Refunds & Exchanges</li>
+                <li>Payment & Shipping</li>
+
+                <li>Help</li>
+                <li>Shipping</li>
+                <li>Refunds</li>
+                <li>Payment</li>
+                
+            </ul>
+
+            <form class="newsletter">
+                <input type="text" name="email" class="email" placeholder="Your Email">
+                <button class="submit">Subscribe</button>
+            </form>
+
+            <div class="socials">
+                <ul class="social-list">
+                    <li><i class="fab fa-facebook-square"></i></li>
+                    <li><i class="fab fa-instagram-square"></i></li>
+                    <li><i class="fab fa-twitter-square"></i></li>
+                    <li><i class="fas fa-envelope-square"></i></li>
+                </ul>
+            </div>
+
+            
+        </section>
+        <section class="footer">
+
+         <p class="copy"> &copy; <span class="footer-title">Outfit</span>2021</p>
+        </section>
+
+        <script src="Js/app.js" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+        <script> 
+            gsap.from('.title', {opacity: 0, duration: 5})
+            gsap.from('.hamburger', {opacity: 0, duration: 5})
+            gsap.from('.favourites', {opacity: 0, duration: 5})
+            gsap.from('.basket', {opacity: 0, duration: 5})
+             gsap.from('.intro-left', {opacity: 0, duration: 3})
+             gsap.from('.intro-left-sale', {opacity: 0, duration: 3})
+             gsap.from('.sale-button', {opacity: 0, duration: 3})
+             gsap.from('.intro-right', {opacity: 0, duration: 3})
+             gsap.from('.explore-button', {opacity: 0, duration: 3})
+        </script>
+    </body>
+</html>
