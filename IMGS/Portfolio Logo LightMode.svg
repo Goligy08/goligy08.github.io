@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="156px" height="133px" viewBox="0 0 156 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Portfolio Logo LightMode</title>
+    <defs>
+        <path d="M33.552,67 C44.424,67 48.672,60.304 48.672,51.808 C48.672,43.384 44.424,38.056 35.784,38.056 L24.12,38.056 L24.12,45.472 L34.92,45.472 C38.88,45.472 40.896,47.776 40.896,51.664 C40.896,55.624 38.88,58.504 34.128,58.504 L26.064,58.504 C16.632,58.504 12.6,53.824 12.6,42.736 C12.6,31.576 16.704,26.896 26.064,26.896 L46.08,26.896 L46.08,18.4 L26.064,18.4 C11.952,18.4 4.104,26.392 4.104,42.736 C4.104,59.008 11.88,67 26.064,67 L33.552,67 Z" id="path-1"></path>
+        <path d="M14.328,67 L14.328,49.432 C14.328,48.568 14.76,48.208 15.552,48.208 L28.224,48.208 L39.312,67 L48.744,67 L37.44,47.56 C44.856,45.472 47.736,38.992 47.736,32.944 C47.736,25.168 43.056,18.4 32.112,18.4 L5.76,18.4 L5.76,26.896 L32.4,26.896 C37.08,26.896 39.168,29.848 39.168,33.304 C39.168,36.76 37.224,40.072 32.4,40.072 L13.464,40.072 C8.136,40.072 5.832,42.304 5.832,47.776 L5.832,67 L14.328,67 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Portfolio-Logo-LightMode">
+            <g id="G" transform="translate(81.000000, 47.000000)" fill-rule="nonzero">
+                <g>
+                    <use fill="#000000" xlink:href="#path-1"></use>
+                    <use fill="#4C566A" xlink:href="#path-1"></use>
+                </g>
+            </g>
+            <polygon id="Rectangle" stroke="#4C566A" stroke-width="10" points="142 6 142 122 27 122 27 6"></polygon>
+            <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="119" y="21" width="37" height="16" rx="8"></rect>
+            <rect id="Rectangle-Copy-3" fill="#FFFFFF" fill-rule="nonzero" x="0" y="96" width="40" height="16" rx="8"></rect>
+            <g id="R" transform="translate(40.000000, 0.000000)" fill-rule="nonzero">
+                <g>
+                    <use fill="#000000" xlink:href="#path-2"></use>
+                    <use fill="#4C566A" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
