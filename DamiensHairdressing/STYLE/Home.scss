@@ -1,0 +1,689 @@
+/*  
+    Damiens' Hairdressing
+    Ronan Goligy
+    2021
+    Home.scss
+*/
+@import "Variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Futura" sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  #Nav {
+    order: 1;
+  }
+
+  #Content {
+    width: 100%;
+    height: 5000px;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    #About {
+      width: 100%;
+      height: 25%;
+      order: 1;
+      background-color: $black;
+      //  border: 2px solid green;
+
+      #Headline {
+        font-family: "Playfair Display", serif;
+        color: $white;
+        text-align: center;
+        margin-top: 20%;
+        font-size: 7rem;
+        font-weight: 600;
+        font-style: italic;
+
+        #cycle {
+          width: 200px;
+          display: inline-block;
+        }
+        #Lot {
+          margin: 0 0 0 14%;
+        }
+      }
+    }
+
+    #Info {
+      width: 100%;
+      height: 20%;
+      order: 2;
+      background-color: $white;
+
+      // border: 2px solid yellow;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      #Female-Promo {
+        width: 100%;
+        height: 40%;
+        order: 1;
+        //border: 2px solid magenta;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        #Female-Image-Container {
+          flex: 20%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      #Male-Promo {
+        width: 100%;
+        height: 40%;
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        #Male-Image-Container {
+          flex: 20%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    #Services {
+      width: 100%;
+      height: 20%;
+      order: 3;
+      border-top: 1px solid $lightgrey;
+      font-family: "Recursive", sans-serif;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      #WellaProducts {
+        width: 100%;
+        height: 100%;
+      }
+
+      #Info-Button {
+        width: 15%;
+        height: 2.5rem;
+        margin-left: 50%;
+        border: none;
+        background-color: $red;
+        color: $white;
+        outline: none;
+        font-family: "Recursive", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        opacity: 1;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      #Services-Container-Row1 {
+        width: 100%;
+        height: 33%;
+        order: 1;
+        // border: 2px solid red;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        #Row1-Image {
+          width: 50%;
+          height: 100%;
+          order: 1;
+          //  border: 2px solid orange;
+          #ToolLayout {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        #Row1-Info {
+          width: 50%;
+          height: 100%;
+          order: 2;
+          //  border: 2px solid green;
+          #Row1-Title {
+            font-weight: 900;
+            font-size: 2.4rem;
+            margin-left: 5%;
+          }
+          #Row1-Title-Info {
+            font-weight: 400;
+            font-size: 1rem;
+            margin-left: 5%;
+          }
+        }
+      }
+      #Services-Container-Row2 {
+        width: 100%;
+        height: 33%;
+        order: 2;
+        //border: 2px solid green;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        #Row2-Image {
+          width: 50%;
+          height: 100%;
+          order: 2;
+          // border: 2px solid orange;
+        }
+        #Row2-Info {
+          width: 50%;
+          height: 100%;
+          order: 1;
+          // border: 2px solid green;
+
+          #Row2-Title {
+            font-weight: 900;
+            font-size: 2.4rem;
+            margin-left: 5%;
+          }
+          #Row2-Title-Info {
+            font-weight: 400;
+            font-size: 1rem;
+            margin-left: 5%;
+          }
+        }
+      }
+      #Services-Container-Row3 {
+        width: 100%;
+        height: 33%;
+        order: 3;
+        // border: 2px solid yellow;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        #Row3-Image {
+          width: 50%;
+          height: 100%;
+          order: 1;
+          background-color: #323232;
+          // border: 2px solid orange;
+          #AmericanCrewPoster {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        #Row3-Info {
+          width: 50%;
+          height: 100%;
+          order: 2;
+          //  border: 2px solid green;
+
+          #Row3-Title {
+            font-weight: 900;
+            font-size: 2.4rem;
+            margin-left: 5%;
+          }
+          #Row3-Title-Info {
+            font-weight: 400;
+            font-size: 1rem;
+            margin-left: 5%;
+          }
+        }
+      }
+    }
+    #Contact {
+      width: 100%;
+      height: 35%;
+      order: 4;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      //  border: 2px solid yellow;
+
+      #Contact-Container {
+        order: 1;
+        width: 80%;
+        height: 60%;
+        margin: 10% auto;
+        border: 1px solid $black;
+        border-left: none;
+        font-family: "Recursive", sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      #Contact-Opening {
+        width: 30%;
+        background-color: $lightgrey;
+        //border: 3px solid green;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        #Opening-Img {
+          width: 90%;
+          height: 30%;
+          // border: 2px solid magenta;
+          margin: 0 0 0 5%;
+        }
+        #Opening-Hours {
+          width: 90%;
+          height: 70%;
+          //  border: 2px solid lightblue;
+          margin: 0 0 0 5%;
+
+          #Opening-Hours-Title {
+            font-size: 2rem;
+            text-align: center;
+          }
+
+          #List-Hours {
+            list-style: none;
+            font-size: 1.5rem;
+            line-height: 1.5;
+
+            #Day {
+              font-weight: 500;
+            }
+          }
+          #Notice {
+            font-size: 1rem;
+            text-align: center;
+            font-style: italic;
+            font-weight: 200;
+          }
+        }
+      }
+      #Contact-Form {
+        width: 60%;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        #Label-Name,
+        #Label-Email,
+        #Label-Subject,
+        #Label-Message {
+          font-size: 1.5rem;
+          font-weight: 400;
+          margin-left: 2%;
+        }
+
+        #Contact-Name,
+        #Contact-Email,
+        #Contact-Subject,
+        #Contact-Message {
+          outline: none;
+          border: 2px solid $lightgrey;
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        #Contact-Title {
+          font-family: "Playfair Display", serif;
+          font-weight: 600;
+          font-style: italic;
+          margin-left: 2%;
+          text-decoration: underline;
+        }
+
+        #Contact-Name {
+          order: 1;
+          width: 50%;
+          height: 2.5rem;
+        }
+        #Contact-Email {
+          order: 2;
+          width: 50%;
+          height: 2.5rem;
+        }
+        #Contact-Subject {
+          order: 3;
+          width: 50%;
+          height: 2.5rem;
+        }
+        #Contact-Message {
+          order: 4;
+          width: 50%;
+          height: 4.5rem;
+        }
+        #Contact-Submit {
+          order: 5;
+          width: 15%;
+          height: 2.5rem;
+          margin-left: 2%;
+          border: none;
+          outline: none;
+          background-color: $red;
+          color: white;
+          cursor: pointer;
+          font-family: "Recursive", sans-serif;
+          font-size: 1.2rem;
+          font-weight: 600;
+          opacity: 1;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      #Bio {
+        order: 2;
+        width: 80%;
+        height: 40%;
+        margin: 0 auto;
+        // border: 2px solid green;
+        line-height: 0.4;
+
+        #Bio-Title {
+          font-family: "Oswald";
+          letter-spacing: 0.1rem;
+          font-size: 4rem;
+          font-weight: 400;
+          color: $grey;
+          text-align: center;
+          top: 0;
+
+          #Bio-Title-Bold {
+            font-family: "Franklin Gothic" sans-serif;
+            font-weight: 800;
+            letter-spacing: 0;
+            color: $black;
+          }
+        }
+
+        #Bio-Info {
+          font-family: "Recursive", sans-serif;
+          font-size: 0.9rem;
+          font-style: italic;
+          text-align: center;
+          top: 0;
+        }
+
+        #Brand-Logos {
+          width: 100%;
+          margin: 3% 0 0 0;
+          //border: 2px solid blue;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+
+          img {
+            width: 150px;
+          }
+
+          #WellaLogo {
+            order: 1;
+          }
+          #AmericanCrewLogo {
+            order: 2;
+          }
+          #KolestonLogo {
+            order: 3;
+          }
+        }
+      }
+    }
+    #Footer {
+      width: 100%;
+      height: 7%;
+      order: 5;
+      background-color: $black;
+      //border: 2px solid red;
+
+      #Footer-Info-Content {
+        width: 100%;
+        height: 100%;
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        letter-spacing: 0.1rem;
+
+        #Address {
+          font-family: "Recursive", sans-serif;
+          width: 33%;
+          order: 1;
+          // border: 2px solid white;
+          margin: 0 0 0 4%;
+          color: $white;
+
+          #Address-Title {
+            margin-left: 2%;
+            font-size: 1rem;
+            color: $white;
+          }
+
+          #Address-Content {
+            margin-left: 2%;
+            font-size: 1rem;
+            color: $grey;
+          }
+        }
+
+        #Sitemap {
+          width: 33%;
+          height: 100%;
+          order: 2;
+          font-family: "Recursive", sans-serif;
+          margin: 0 0 0 4%;
+          color: $white;
+          position: relative;
+
+          #Sitemap-Title {
+            font-size: 1rem;
+            color: $white;
+          }
+
+          #Sitemap-List {
+            list-style: none;
+            font-size: 1rem;
+            color: $grey;
+            cursor: pointer;
+          }
+
+          #Sitemap-Copyright {
+            font-size: 0.8rem;
+            color: $grey;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            margin: 0 0 0 15%;
+          }
+        }
+
+        #Socials {
+          width: 33%;
+          order: 3;
+          margin: 0 0 0 6%;
+          //  border: 2px solid yellow;
+          font-family: "Recursive", sans-serif;
+          color: $white;
+
+          #Socials-Title {
+            font-size: 1rem;
+            color: $white;
+          }
+
+          #Socials-List {
+            list-style: none;
+            text-decoration: underline;
+            font-size: 1rem;
+            color: $grey;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width: 550px) {
+  body {
+    width: 100%;
+
+    #Content {
+      width: 100%;
+      height: 10000px;
+
+      #About {
+        width: 100%;
+        height: 15%;
+        #Headline {
+          margin-top: 60%;
+          #cycle {
+            width: 300px;
+            height: 80px;
+            margin: -5% 0 15% 0;
+            display: block;
+            text-align: center;
+          }
+          #Lot {
+            margin: 40% 0 0 14%;
+          }
+        }
+      }
+
+      #Info {
+        width: 100%;
+        height: 40%;
+        justify-content: flex-start;
+
+        #Female-Promo {
+          flex-direction: column;
+        }
+        #Male-Promo {
+          flex-direction: column;
+        }
+      }
+
+      #Services {
+        width: 100%;
+        height: 20%;
+        #Info-Button {
+          width: 30%;
+          margin-left: 40%;
+        }
+        #Services-Container-Row1 {
+          width: 100%;
+          flex-direction: column;
+          #Row1-Image {
+            width: 100%;
+          }
+          #Row1-Info {
+            width: 100%;
+          }
+        }
+        #Services-Container-Row2 {
+          flex-direction: column;
+          #Row2-Image {
+            width: 100%;
+            order: 1;
+          }
+          #Row2-Info {
+            width: 100%;
+            order: 2;
+          }
+        }
+        #Services-Container-Row3 {
+          flex-direction: column;
+          #Row3-Image,
+          #Row3-Info {
+            width: 100%;
+          }
+        }
+      }
+
+      #Contact {
+        width: 100%;
+        height: 30%;
+
+        #Contact-Container {
+          height: 60%;
+          flex-direction: column;
+          border: 1px solid $black;
+          #Contact-Opening {
+            width: 100%;
+            height: 65%;
+
+            #Opening-Img {
+              width: 100%;
+              margin: 0;
+            }
+          }
+          #Contact-Form {
+            width: 100%;
+            height: 35%;
+
+            #Contact-Submit {
+              width: 40%;
+            }
+          }
+        }
+
+        #Bio {
+          width: 100%;
+          height: 40%;
+          line-height: 1;
+
+          #Brand-Logos {
+            height: 60%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin: 0 30%;
+          }
+        }
+      }
+      #Footer {
+        width: 100%;
+        height: 7%;
+        #Footer-Info-Content {
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          #Address {
+            order: 1;
+          }
+          #Sitemap {
+            width: 100%;
+            height: 40%;
+            order: 3;
+            position: relative;
+
+            #Sitemap-Copyright {
+              position: absolute;
+              bottom: 0;
+              margin: 0 0 0 15%;
+            }
+          }
+          #Socials {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/08229a6deb.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="STYLE/contact.css">
+    </head>
+
+    <body>
+    
+            <nav class="nav">
+                <img class="logo" src="IMGS/Portfolio Logo LightMode.svg" alt="">
+               
+                <button class="close" onclick="window.location.href='index.html';">Close<i class="fas fa-times"></i></button>
+                
+            </nav>
+
+            <main class="main">
+                <i class="fas fa-comment-dots" id="speech-bubble"></i>
+                <h1 class="title">Let's Talk!</h1>
+                <p class="message-info">If you would like to get in touch, Please send a message using the form below!</p>
+
+                <form action="https://formsubmit.co/r.goligy@hotmail.co.uk" method="POST" id="userForm" class="userForm">
+
+                <div class="formElement">
+                    <input type="hidden" name="_subject" value="New Email From: Ronan Goligy Portfolio!">
+                    <input type="text" id="name" class="name" name="name" placeholder="Enter Your Name" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                
+                 <div class="formElement">
+                    <input type="text" id="email" class="email" name="email" placeholder="Enter your Email" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                 </div>
+
+                 
+                
+                 <div class="formElement">
+                    <textarea name="msg" id="msg" class="msg" form="userForm" placeholder="Enter your message..."></textarea>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                 </div>
+                 
+                 <button class="submit">Submit <i class="fas fa-arrow-right"></i></button>
+
+
+                </form>
+            </main>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+        <script src="JS/mail.js" async defer></script>
+    </body>
+</html>
