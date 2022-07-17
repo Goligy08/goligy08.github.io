@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/08229a6deb.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽</text></svg>">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="STYLE/main.css">
+    </head>
+    <body>
+       <header class="header">
+        <img id="title-img" class="title-img" src="RecipeTitle.svg" alt="Meal mate title">
+        <button id="open-fav-panel" class="open-fav-panel"><i class="fas fa-solid fa-heart"></i></button>
+        <section class="filters">
+            <div class="search-container">
+
+                <form id="form">
+                    <input type="text" class="search" id="search" placeholder="Search for a recipe..">
+                     <i class="fas fa-search" id="magnify"></i>
+                     
+        
+                </form>
+                <div class="filter-container">
+                    <button id="chicken" class="filter-btn">Chicken<i class="fas fa-egg"></i></button>
+                    <button  id="beef" class="filter-btn">Beef<i class="fas fa-hamburger"></i></button>
+                    <button  id="fish" class="filter-btn">Fish<i class="fas fa-solid fa-fish"></i></button>
+                    <button  id="pork" class="filter-btn">Pork <i class="fas fa-solid fa-bacon"></i></button>
+                    <button  id="vegetarian" class="filter-btn">Vegetarian<i class="fas fa-solid fa-carrot"></i></button>
+                    <button id="vegan" class="filter-btn">Vegan<i class="fas fa-solid fa-leaf"></i></button>
+                   </div>
+    
+                
+            </div>
+           </section>
+        
+
+       
+
+       </header>
+
+       <div class="favourite-panel" id="favourite-panel">
+           <button class="exit" id="exit"><i class="fas fa-solid fa-angle-left"></i></button>
+           <aside class="favourite-list" id="favourite-list">
+            <h3>Saved Recipes</h3>
+
+         <div class="favourite-item-container" id="favourite-item-container">
+             <img class="favourite-img">
+             <h3 class="recipe-title">Example Recipe</h3>
+             <button class="remove" id="remove"><i class="fas fa-solid fa-trash-can"></i></button>
+             <button class="see-more" id="see-more"><i class="fas fa-solid fa-circle-arrow-right"></i></button>
+         </div>
+        </aside>
+        
+            
+    </div>
+
+   
+
+       <main class="main">
+         
+         
+
+           <section class="recipe-list" id="recipe-list">
+          <!---   
+           <div class="recipe-container" id="recipe-container">
+               <span class="random">Random Recipe</span>
+              <img class="recipe-img">
+              <h3 class="recipe-title">Beef Stroganoff</h3>
+              <p class="recipe-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, repudiandae. Reiciendis,
+                   commodi? Natus accusamus possimus animi accusantium quos,
+                   tenetur sit ad deleniti perspiciatis quasi magni obcaecati esse dolores voluptates recusandae!</p>
+                 
+                 <button id="favourite"><i class="fa-solid fa-badge-check"></i></button>  
+           </div>   
+
+        -->
+           </section>
+
+          
+         
+
+         
+       </main>
+      
+       <div class="modal-container" id="modal-container">
+       
+        <div class="modal">
+            
+            <div class="see-more-recipe">
+            <img class="modal-img">
+            <h2 class="modal-title"></h2>
+            <p class="modal-instructions">
+            </p>
+
+            
+        </div>
+        <button class="modal-close" id="modal-close"><i class="fas fa-solid fa-angle-left"></i></button>
+        </div>
+    
+       </div>
+    
+        <script src="JS/app.js" async defer></script>
+    </body>
+</html>

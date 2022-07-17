@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="380px" height="209px" viewBox="0 0 380 209" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-109.000000, -642.000000)" fill="#FFFFFF">
+            <g id="Group" transform="translate(119.000000, 642.000000)">
+                <text id="Mate" font-family="Futura-MediumItalic, Futura" font-size="70" font-style="italic" font-weight="400">
+                    <tspan x="130" y="171">Mate</tspan>
+                </text>
+                <text id="Meal" font-family="Yellowtail-Regular, Yellowtail" font-size="110" font-weight="normal">
+                    <tspan x="0" y="107">Meal</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

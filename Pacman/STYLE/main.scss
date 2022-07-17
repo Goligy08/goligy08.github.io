@@ -1,0 +1,50 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 560px;
+  height: 560px;
+  border: solid black;
+}
+
+.pacdot {
+  background-color: gold;
+  border: 5px solid white;
+  box-sizing: border-box;
+}
+
+.wall {
+  background-color: #333;
+}
+
+.ghost {
+  background-color: red;
+  border: 0px;
+}
+
+.pinky {
+  background-color: pink;
+  border: 0px;
+}
+
+.inky {
+  background-color: cyan;
+  border: 0px;
+}
+
+.scaredGhost {
+  background-color: teal;
+  border: 0px;
+}
+
+.power-pellet {
+  background-color: green;
+  border-radius: 50%;
+}

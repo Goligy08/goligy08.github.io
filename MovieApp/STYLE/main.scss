@@ -1,0 +1,239 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1d;
+  width: 100vw;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1a1a1d;
+  color: #c3073f;
+  z-index: 10;
+  //border-bottom: 1px solid #c3073f;
+
+  .logo {
+    margin-top: 1%;
+  }
+  #form {
+    position: relative;
+    //border: 2px solid yellow;
+    .search {
+      width: 6rem;
+      height: 1rem;
+      border-radius: 2rem;
+      padding: 1.5rem;
+      outline: none;
+      color: white;
+      background-color: #1a1a1d;
+      border: 1px solid #c3073f;
+      margin: 5% 0 0 0;
+    }
+
+    .search.extend {
+      width: 12rem;
+      transition: width 140ms ease-in-out;
+    }
+    #magnify {
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      top: 30%;
+      right: 6%;
+      background-color: inherit;
+      color: #c3073f;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      // border: 2px solid blue;
+    }
+
+    #magnify.hide {
+      opacity: 0;
+    }
+
+    #clear {
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      top: 30%;
+      right: 6%;
+      opacity: 0;
+      background-color: inherit;
+      color: #c3073f;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    #clear.show {
+      opacity: 100;
+    }
+  }
+
+  .filters {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #filters {
+    display: none;
+    width: 8rem;
+    height: 2rem;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: "Comfortaa", cursive;
+    font-weight: 700;
+    color: #c3073f;
+  }
+
+  @media (min-width: 600px) {
+    #filters {
+      width: 6rem;
+      height: 3rem;
+      display: inline;
+      position: relative;
+      cursor: pointer;
+      border-radius: 0.3rem;
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 0.2rem;
+        border-radius: 0.2rem;
+        position: absolute;
+        left: 0.1rem;
+        bottom: -0.2rem;
+        background-color: #c3073f;
+        transition: width 300ms ease-in;
+      }
+
+      &:focus::after {
+        width: 95%;
+      }
+
+      &:hover {
+        background-color: #3a3a3a;
+      }
+    }
+
+    #magnify {
+      top: 3.2%;
+      right: 6.5%;
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  background-color: #1a1a1d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 300px;
+  padding: 0.25rem 0.25rem;
+  margin: 1.5rem 1.5rem;
+  // border: 2px solid #c3073f;
+  color: #c3073f;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  img {
+    max-width: 100%;
+    cursor: pointer;
+  }
+
+  .movie-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      padding: 0.5rem 0.5rem;
+      cursor: pointer;
+    }
+
+    span {
+      padding: 0.2rem 0.2rem;
+      border-radius: 50%;
+      color: white;
+    }
+    span.green {
+      background-color: green;
+      border: 2px solid green;
+    }
+    span.amber {
+      background-color: orange;
+      border: 2px solid orange;
+    }
+    span.red {
+      background-color: red;
+      border: 2px solid red;
+    }
+
+    .movie-overview {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2.5rem;
+      background-color: #1a1a1d;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 600px) {
+    width: 20rem;
+  }
+}
+
+.movie:hover .movie-overview {
+  opacity: 0.9;
+}
+
+.more {
+  width: 6rem;
+  height: 3rem;
+  background: rgb(195, 7, 63);
+  background: linear-gradient(
+    45deg,
+    rgba(195, 7, 63, 1) 2%,
+    rgba(236, 135, 56, 1) 91%
+  );
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  bottom: 2%;
+  left: 47%;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

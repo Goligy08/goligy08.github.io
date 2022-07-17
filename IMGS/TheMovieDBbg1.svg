@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="400px" viewBox="0 0 750 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Desktop HD Copy 3</title>
+    <g id="Desktop-HD-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#1A1A1D" x="0" y="0" width="750" height="400"></rect>
+        <text id="The-MovieDB-Copy" stroke="#ED3833" stroke-width="2" font-family="GoboldExtra2, Gobold Extra2" font-size="56" font-weight="600" fill="#F3923D">
+            <tspan x="355" y="161">The </tspan>
+            <tspan x="355" y="234">MovieDB</tspan>
+        </text>
+    </g>
+</svg>

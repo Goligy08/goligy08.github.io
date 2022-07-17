@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="232px" height="54px" viewBox="0 0 232 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-10" transform="translate(-288.000000, -226.000000)">
+            <g id="Group-2" transform="translate(289.000000, 226.512080)">
+                <g id="The-MovieDB-logo" transform="translate(0.000000, 5.487920)" fill="#F3923D" fill-rule="nonzero" font-family="GoboldExtra2, Gobold Extra2" font-size="36" font-weight="600" stroke="#ED3833" stroke-width="2">
+                    <text id="The-MovieDB">
+                        <tspan x="0" y="40">The MovieDB</tspan>
+                    </text>
+                </g>
+                <g id="Group" transform="translate(206.597611, 24.000000) rotate(-18.000000) translate(-206.597611, -24.000000) translate(187.097611, 6.000000)">
+                    <polygon id="Path-4" fill="#000000" points="37.5917338 0.564921169 0.897300722 5.36011759 1.38916822 9.79250078 1.38916822 35.5649212 38.3254165 35.5649212 38.3254165 13.4678592 38.8973007 13.4678592 38.8973007 9.33810711 37.6194578 9.33810711 5.58122074 9.33810711 38.3254165 4.93993948"></polygon>
+                    <polygon id="Path-5" fill="#FFFFFF" points="4.78558302 5.39404045 7.75494096 4.95435968 9.78558302 8.51085649 6.81239678 8.95435968"></polygon>
+                    <polygon id="Path-8" fill="#FFFFFF" points="22.7135036 2.69044827 25.7134259 2.31753591 27.7135036 4.9007146 24.7847212 5.31753591"></polygon>
+                    <polygon id="Path-9" fill="#FFFFFF" points="32.0251708 1.57371975 35.0705277 1.08074891 37.0251708 4.56247873 34.0239719 5.08074891"></polygon>
+                    <polygon id="Path-10" fill="#FFFFFF" points="6.73005894 9.07167741 10.0039742 9.07167741 8.26755292 13.0716774 5.00397422 13.0716774"></polygon>
+                    <polygon id="Path-11" fill="#FFFFFF" points="14.2202369 12.6977979 17.5013065 12.825704 19.2202369 8.96479662 16.0017869 8.825704"></polygon>
+                    <polygon id="Path-12" fill="#FFFFFF" points="23.2456905 13.5613578 26.4948847 13.5613578 28.2456905 9.7251457 25.0681969 9.56135777"></polygon>
+                    <polygon id="Path-13" fill="#FFFFFF" points="34.237719 9.31538436 32.4619532 13.1942895 35.6933088 13.3153844 37.4619532 9.54970801"></polygon>
+                    <line x1="2.89730072" y1="18.0649212" x2="36.8973007" y2="18.0649212" id="Path-14" stroke="#FFFFFF" stroke-width="2"></line>
+                    <line x1="2.92488293" y1="23.1638661" x2="36.9248829" y2="23.1638661" id="Path-15" stroke="#FFFFFF" stroke-width="2"></line>
+                    <line x1="2.95246514" y1="28.262811" x2="36.9524651" y2="28.262811" id="Path-16" stroke="#FFFFFF" stroke-width="2"></line>
+                    <line x1="12.8086525" y1="33.4490613" x2="12.8086525" y2="28.4490613" id="Path-17" stroke="#FFFFFF" stroke-width="2"></line>
+                    <line x1="27.12386" y1="33.1755056" x2="27.12386" y2="28.1755056" id="Path-18" stroke="#FFFFFF" stroke-width="2"></line>
+                    <polygon id="Path-6" fill="#FFFFFF" points="14.4788682 3.11941282 16.3423643 5.75431831 19.4788682 5.42763979 17.5776122 2.75431831"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

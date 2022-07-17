@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/08229a6deb.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍿</text></svg>">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="STYLE/main.css">
+    </head>
+    <body>
+    
+      <nav class="nav">
+          <img class="logo" src="The MovieDB logo.svg">
+           
+          <div class="filters">
+            <button class="nowPlaying" id="filters">Now Playing</button>
+            <button class="popular" id="filters">Popular</button>
+            <button class="topRated" id="filters">Top Rated</button>
+            <button class="upcoming" id="filters">Upcoming</button>
+            <button class="tv" id="filters">TV Shows</button>
+             
+          </div>
+        
+          <form id="form">
+              <input type="text" name="search" id="search" class="search">
+              <button id="magnify"><i class="fas fa-search"></i></button>
+              <button id="clear"><i class="fas fa-times"></i></button>
+              
+          </form>
+      </nav>
+
+      <main class="main">
+
+      
+      
+      </main>
+    
+     
+        
+        <script src="JS/app.js" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js" integrity="sha512-I0VFyPo7hdM7YrEbQ0pvX4bX2904k0+B19u/xBrPrQoMprfcSnIDfGFD8kP52GbAhwtDjkEVhXlQvj8+vkJyew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script>
+            gsap.from('main', {opacity: 0, duration: 1.4, y: -50})
+        </script>
+    </body>
+</html>
