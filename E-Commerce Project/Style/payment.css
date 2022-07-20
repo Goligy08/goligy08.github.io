@@ -1,0 +1,368 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+body h1,
+body h2,
+body h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 600px) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+body .container {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+  height: 70%;
+  background-color: #ffffff;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  body .container {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 65%;
+    height: 100%;
+    background-color: #ffffff;
+  }
+}
+
+body .container .customer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 4rem 4rem;
+}
+
+body .container .customer-info .back-btn {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+body .container .customer-info .back-btn i {
+  font-size: 1.4rem;
+}
+
+body .container .customer-info .progress-bar {
+  width: 50%;
+  height: 1rem;
+  background-color: #eeeeee;
+  position: absolute;
+  top: 2%;
+  left: 25%;
+  border-radius: 2.5rem;
+}
+
+body .container .customer-info .progress-bar .progress-done {
+  width: 50%;
+  height: 1rem;
+  background-color: #52b783;
+  border-radius: 2.5rem;
+}
+
+body .container .customer-info .progress-bar .progress-done.complete {
+  width: 100%;
+}
+
+body .container .customer-info .form-step1 {
+  width: 90%;
+  height: 90vh;
+  position: absolute;
+  top: 10%;
+}
+
+body .container .customer-info .form-step1 .payment-details {
+  width: 8rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #52b783;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+}
+
+body .container .customer-info .form-step1 .payment-details:hover {
+  opacity: 0.8;
+}
+
+body .container .customer-info .form-step1.hide {
+  display: none;
+}
+
+body .container .customer-info .form-step2 {
+  width: 80%;
+  position: absolute;
+  top: 15%;
+  display: none;
+}
+
+body .container .customer-info .form-step2 .CVV {
+  width: 10%;
+}
+
+body .container .customer-info .form-step2 h1 {
+  padding: 1.5rem 1.5rem;
+  font-size: 2rem;
+}
+
+body .container .customer-info .form-step2 h3 {
+  padding: 0.5rem 0.5rem;
+  font-size: 0.9rem;
+  text-indent: 3%;
+}
+
+body .container .customer-info .form-step2.show {
+  display: inline;
+}
+
+body .container .customer-info input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: none;
+}
+
+body .container .customer-info .formElement {
+  width: 70%;
+  height: 3rem;
+  border-radius: 0.4rem;
+  position: relative;
+  margin: 5% 0 0 5%;
+  border: 1px solid #c8c8c8;
+}
+
+body .container .customer-info .formElement.success {
+  border: 2px solid #52b783;
+}
+
+body .container .customer-info .formElement.failure {
+  border: 2px solid #dc5454;
+}
+
+body .container .customer-info .formElement-short {
+  width: 30%;
+  height: 3rem;
+  border-radius: 0.4rem;
+  border: 1px solid #c8c8c8;
+  position: relative;
+  margin: 5% 0 0 5%;
+  display: inline-block;
+}
+
+body .container .customer-info .formElement-short.success {
+  border: 2px solid #52b783;
+}
+
+body .container .customer-info .formElement-short.failure {
+  border: 2px solid #dc5454;
+}
+
+body .order-summary {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 40%;
+  height: 100%;
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  border-left: 2px solid #c8c8c8;
+}
+
+@media (min-width: 600px) {
+  body .order-summary {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 35%;
+    height: 100%;
+    background-color: #eeeeee;
+  }
+}
+
+body .order-summary .product-order {
+  width: 90%;
+  height: 25%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin: 5%;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+body .order-summary .product-order .order {
+  width: 100%;
+  height: 18rem;
+  border-bottom: 1px solid grey;
+  margin: 0 0 2% 0;
+}
+
+body .order-summary .product-order .order img {
+  width: 75%;
+  height: 60%;
+  margin: 0 0 0 12%;
+}
+
+body .order-summary .product-order .order h3 {
+  padding: 0.5rem 0.5rem;
+}
+
+body .order-summary .product-order .order p {
+  padding: 0.5rem 0.5rem;
+}
+
+body .order-summary .product-order .order .add {
+  top: 30%;
+}
+
+body .order-summary .discount {
+  margin: 5%;
+  border-bottom: 2px solid #e3e3e3;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+body .order-summary .discount .code {
+  width: 60%;
+  height: 3rem;
+  padding: 1rem;
+}
+
+body .order-summary .discount .apply {
+  width: 30%;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #c8c8c8;
+  color: #fff;
+}
+
+body .order-summary .breakdown {
+  margin: 5%;
+  border-bottom: 2px solid #e3e3e3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+body .order-summary .breakdown h3 {
+  padding: 0.5rem;
+}
+
+body .order-summary .total {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  margin: 5%;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+body .order-summary .submit {
+  width: 8rem;
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  background-color: #52b783;
+  color: #fff;
+  position: absolute;
+  bottom: 2%;
+  right: 4%;
+  cursor: pointer;
+}
+
+body .order-summary .submit:hover {
+  opacity: 0.8;
+}
+
+.confirmation-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #e3e3e3;
+  display: none;
+}
+
+.confirmation-modal .confirmation-msg {
+  width: 80%;
+  height: 20%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.confirmation-modal .confirmation-msg h3 {
+  padding: 0.5rem 0.5rem;
+}
+
+.confirmation-modal .confirmation-msg p {
+  padding: 1.5rem 1.5rem;
+}
+
+.confirmation-modal.show {
+  display: inline;
+}
+/*# sourceMappingURL=payment.css.map */
