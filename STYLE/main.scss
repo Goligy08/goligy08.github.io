@@ -1,0 +1,1233 @@
+@import "variables.scss";
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  width: 100vw;
+  height: 6800px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-family: "Source Code Pro", monospace;
+
+  .nav {
+    width: 100vw;
+    height: 3%;
+    order: 1;
+    background-color: $white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    position: relative;
+    top: 0;
+    // border: 2px solid blue;
+
+    .logo {
+      background-image: url("../IMGS/Portfolio\ Logo\ LightMode.svg");
+      background-size: cover;
+      width: 3.9rem;
+      height: 3.3rem;
+      position: absolute;
+      top: 6%;
+      left: 3%;
+      order: 1;
+
+      @media (min-width: 500px) {
+        top: 18%;
+      }
+    }
+
+    .logo.darkTheme {
+      background-image: url("../IMGS/Portfolio\ Logo\ DarkMode.svg");
+    }
+
+    .desk-menu {
+      display: none;
+
+      @media (min-width: 920px) {
+        width: 30%;
+        order: 2;
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        z-index: 11;
+
+        li {
+          font-weight: 600;
+          padding: 0.2rem;
+          border-radius: 0.2rem;
+          font-size: 1rem;
+          cursor: pointer;
+          color: $darkGreyFont;
+          &:hover {
+            background-color: $teal;
+            opacity: 0.6;
+          }
+          @media (min-width: 1100px) {
+            font-size: 1rem;
+          }
+          @media (min-width: 1600px) {
+            font-size: 1.2rem;
+          }
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .hamburger {
+      width: 3rem;
+      height: 3rem;
+      background-color: $accentBlue;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      position: absolute;
+      top: 6%;
+      right: 3%;
+      cursor: pointer;
+      z-index: 1;
+
+      i {
+        font-size: 1.5rem;
+        color: $white;
+      }
+
+      @media (min-width: 500px) {
+        width: 3rem;
+        height: 3rem;
+      }
+      @media (min-width: 920px) {
+        display: none;
+      }
+    }
+    .hamburger.hide {
+      display: none;
+    }
+    .exit {
+      width: 3rem;
+      height: 3rem;
+      background-color: $accentBlue;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      position: absolute;
+      top: 6%;
+      right: 3%;
+      color: $white;
+      cursor: pointer;
+
+      i {
+        font-size: 1.2rem;
+        color: $white;
+      }
+      @media (min-width: 500px) {
+        width: 3rem;
+        height: 3rem;
+      }
+      @media (min-width: 920px) {
+        display: none;
+      }
+    }
+
+    .menu {
+      width: 100%;
+      height: 100%;
+      color: $darkGreyFont;
+      background-color: $white;
+      position: fixed;
+      top: 10%;
+      right: 0;
+      z-index: 10;
+      display: none;
+
+      ul {
+        width: 100%;
+        height: 30%;
+        position: fixed;
+        top: 10%;
+        list-style: none;
+        border-bottom: 3px solid $snow;
+
+        li {
+          width: 100%;
+          height: 20%;
+          text-align: center;
+          font-weight: 600;
+          cursor: pointer;
+          padding: 2rem 2rem 2rem 2rem;
+          //color: $darkGreyFont;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .menu.darkTheme {
+      background-color: $nordGrey;
+      color: $snow;
+    }
+
+    .menu.show {
+      display: inline;
+    }
+  }
+  .nav.darkTheme {
+    background-color: $nordGrey;
+  }
+
+  .hero {
+    width: 100vw;
+    height: 20%;
+    order: 2;
+    //border: 2px solid orange;
+    background-color: $white;
+    position: relative;
+
+    @media (min-width: 500px) {
+      height: 8%;
+    }
+    @media (min-width: 920px) {
+      height: 28%;
+    }
+
+    .hero-title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: $darkGreyFont;
+      position: absolute;
+      top: 5%;
+      left: 20%;
+
+      @media (min-width: 500px) {
+        font-size: 3.7rem;
+      }
+      @media (min-width: 920px) {
+        font-size: 2.5rem;
+        font-weight: 800;
+        top: 15%;
+        left: 5%;
+      }
+      @media (min-width: 1500px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 1900px) {
+        font-size: 3.2rem;
+      }
+    }
+    .hero-copy {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: $darkGreyFont;
+      position: absolute;
+      top: 15%;
+      left: 15%;
+
+      @media (min-width: 500px) {
+        font-size: 1.4rem;
+        top: 40%;
+      }
+      @media (min-width: 920px) {
+        font-size: 0.9rem;
+        font-weight: 400;
+        top: 20%;
+        left: 6%;
+      }
+      @media (min-width: 1100px) {
+        font-size: 1.2rem;
+      }
+      @media (min-width: 1600px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    .hero-contact {
+      width: 8rem;
+      height: 3rem;
+      position: absolute;
+      top: 22%;
+      left: 30%;
+      border: 2px solid $ice;
+      outline: none;
+      background-color: $ice;
+      color: $snow;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        border: 3px solid $ice;
+        color: $ice;
+        background-color: $white;
+      }
+
+      @media (min-width: 500px) {
+        top: 60%;
+        left: 45%;
+      }
+      @media (min-width: 920px) {
+        width: 14rem;
+        height: 3rem;
+        border-radius: 2rem;
+        top: 25%;
+        left: 15%;
+      }
+      @media (min-width: 1600px) {
+        left: 25%;
+      }
+    }
+
+    .hero-contact.darkTheme {
+      background-color: $nordGrey;
+      &:hover {
+        background-color: $ice;
+        color: $snow;
+      }
+    }
+
+    .hero-img {
+      background-image: url("../IMGS/Hero7.svg");
+      display: none;
+
+      @media (min-width: 920px) {
+        width: 1300px;
+        height: 1500px;
+        display: inline;
+        position: absolute;
+        border: none;
+        top: -35%;
+        right: -23%;
+        z-index: 0;
+
+        //top: -45%;
+        //right: -22%;
+      }
+
+      @media (min-width: 1450px) {
+        width: 1300px;
+        height: 1500px;
+        display: inline;
+        position: absolute;
+        border: none;
+        top: -35%;
+        right: -30%;
+        z-index: 0;
+      }
+
+      @media (min-width: 1600px) {
+        width: 1300px;
+        height: 1500px;
+        display: inline;
+        position: absolute;
+        border: none;
+        top: -35%;
+        right: -15%;
+        z-index: 1;
+      }
+    }
+    .hero-img.darkTheme {
+      background-image: url("../IMGS/Hero8.svg");
+    }
+
+    .mobile-hero {
+      width: 700px;
+      height: 1100px;
+      position: absolute;
+      top: 15%;
+      left: -70%;
+      @media (min-width: 920px) {
+        display: none;
+      }
+
+      @media (min-width: 1600px) {
+        display: none;
+      }
+    }
+
+    .hero-wave {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .hero-wave.darkTheme {
+      path {
+        fill: $nordDarkerGrey;
+      }
+    }
+  }
+
+  .hero.darkTheme {
+    background-color: $nordGrey;
+    .hero-title,
+    .hero-copy {
+      color: $snow;
+    }
+  }
+
+  .projects {
+    width: 100vw;
+    height: 52%;
+    order: 3;
+    //border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: $arcticGrey;
+    position: relative;
+
+    @media (min-width: 500px) {
+      height: 75%;
+    }
+    @media (min-width: 920px) {
+      height: 60%;
+    }
+
+    button {
+      font-family: "Source Code Pro", monospace;
+      font-weight: 600;
+      color: $darkGreyFont;
+    }
+
+    .project1 {
+      width: 90%;
+      height: 500px;
+      margin: 0 0 0 8%;
+      background: url("../IMGS/OutfitMobile.png");
+      background-repeat: no-repeat;
+      border-radius: 2vh;
+      cursor: pointer;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media (min-width: 500px) {
+        background: url("../IMGS/OutfitBG.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 4%;
+      }
+      @media (min-width: 920px) {
+        background: url("../IMGS/OutfitBG.png");
+        background-size: cover;
+        background-position: 20% 45%;
+        background-repeat: no-repeat;
+        width: 60%;
+        height: 400px;
+        flex-direction: row;
+        margin: 0 0 0 5%;
+      }
+      @media (min-width: 1600px) {
+        width: 50%;
+        height: 500px;
+      }
+
+      .project-preview {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        order: 1;
+        border-radius: 2vh 2vh 0 0;
+        background-image: linear-gradient(45deg, Purple, red);
+
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+          border-radius: 2vh 0 0 2vh;
+          -webkit-border-radius: 2vh 0 0 2vh;
+          -moz-border-radius: 2vh 0 0 2vh;
+        }
+      }
+
+      .project-info {
+        width: 100%;
+        height: 30%;
+        order: 2;
+
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+        }
+
+        .project1-btn {
+          width: 10rem;
+          height: 2.5rem;
+          position: absolute;
+          border: none;
+          border-radius: 2rem;
+          top: 85%;
+          left: 25%;
+          background-color: $white;
+          border: 2px solid $nordGrey;
+          cursor: pointer;
+
+          @media (min-width: 920px) {
+            top: 80%;
+            left: 65%;
+          }
+        }
+      }
+    }
+    .project1.darkTheme {
+      background-color: $nordGrey;
+    }
+
+    .project2 {
+      width: 90%;
+      height: 500px;
+      margin: 0 0 0 8%;
+      background: url("../IMGS/HairdressingBGMobile.svg");
+      background-repeat: no-repeat;
+      border-radius: 2vh;
+      cursor: pointer;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media (min-width: 500px) {
+        background: url("../IMGS/HairdressingBG.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 4%;
+      }
+      @media (min-width: 920px) {
+        background: url("../IMGS/HairdressingBG.svg");
+        background-size: cover;
+        background-position: 20% 45%;
+        background-repeat: no-repeat;
+        width: 60%;
+        height: 400px;
+        flex-direction: row;
+        margin: 0 0 0 30%;
+      }
+      @media (min-width: 1600px) {
+        width: 50%;
+        height: 500px;
+      }
+
+      .project-preview {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        order: 1;
+        border-radius: 2vh 2vh 0 0;
+        background-image: linear-gradient(45deg, teal, green);
+
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+          border-radius: 2vh 0 0 2vh;
+          -webkit-border-radius: 2vh 0 0 2vh;
+          -moz-border-radius: 2vh 0 0 2vh;
+        }
+      }
+      .project-info {
+        width: 100%;
+        height: 30%;
+        order: 2;
+
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+        }
+        .project2-btn {
+          width: 10rem;
+          height: 2.5rem;
+          position: absolute;
+          border: none;
+          border-radius: 2rem;
+          top: 85%;
+          left: 25%;
+          background-color: $white;
+          cursor: pointer;
+
+          @media (min-width: 920px) {
+            top: 80%;
+            left: 65%;
+          }
+        }
+      }
+    }
+    .project2.darkTheme {
+      background-color: $nordGrey;
+    }
+
+    .project3 {
+      width: 90%;
+      height: 500px;
+      margin: 0 0 0 8%;
+      background: url("../IMGS/RecipeBGMobile.png");
+      background-repeat: no-repeat;
+      opacity: 0.75;
+      cursor: pointer;
+      border-radius: 2vh;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media (min-width: 500px) {
+        background: url("../IMGS/RecipePortfolioBG.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 4%;
+      }
+      @media (min-width: 920px) {
+        background: url("../IMGS/RecipePortfolioBG.png");
+        background-size: cover;
+        background-position: 20% 65%;
+        background-repeat: no-repeat;
+        width: 60%;
+        height: 400px;
+        flex-direction: row;
+        margin: 0 0 0 5%;
+      }
+      @media (min-width: 1600px) {
+        width: 50%;
+        height: 500px;
+      }
+      .project-preview {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        order: 1;
+        border-radius: 2vh 2vh 0 0;
+        background-image: linear-gradient(45deg, #fc3748, #ffc371);
+
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+          border-radius: 2vh 0 0 2vh;
+          -webkit-border-radius: 2vh 0 0 2vh;
+          -moz-border-radius: 2vh 0 0 2vh;
+        }
+      }
+
+      .project-info {
+        width: 100%;
+        height: 30%;
+        order: 2;
+
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+        }
+        .project3-btn {
+          width: 10rem;
+          height: 2.5rem;
+          position: absolute;
+          border: 2px solid #2ecc71;
+          border-radius: 2rem;
+          top: 85%;
+          left: 25%;
+          background-color: $white;
+          cursor: pointer;
+
+          @media (min-width: 920px) {
+            top: 85%;
+            left: 70%;
+          }
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .project3.darkTheme {
+      background-color: $nordGrey;
+    }
+
+    .project4 {
+      width: 90%;
+      height: 500px;
+      margin: 0 0 0 8%;
+      background: url("../IMGS/TheMovieDBMobile.svg");
+      background-repeat: no-repeat;
+      cursor: pointer;
+      border-radius: 2vh;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-color: $blue;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media (min-width: 500px) {
+        background: url("../IMGS/TheMovieDBbg2.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 4%;
+      }
+      @media (min-width: 920px) {
+        background: url("../IMGS/TheMovieDBbg2.svg");
+        background-size: cover;
+        background-position: 40% 25%;
+        background-repeat: no-repeat;
+        width: 60%;
+        height: 400px;
+        flex-direction: row;
+        margin: 0 0 0 30%;
+      }
+      @media (min-width: 1600px) {
+        width: 50%;
+        height: 500px;
+      }
+
+      .project-preview {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        order: 1;
+        border-radius: 2vh 2vh 0 0;
+        background-image: linear-gradient(45deg, blue, white);
+
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+          border-radius: 2vh 0 0 2vh;
+          -webkit-border-radius: 2vh 0 0 2vh;
+          -moz-border-radius: 2vh 0 0 2vh;
+        }
+      }
+      .project-info {
+        width: 100%;
+        height: 30%;
+        order: 2;
+        @media (min-width: 920px) {
+          width: 50%;
+          height: 100%;
+        }
+        .project4-btn {
+          width: 10rem;
+          height: 2.5rem;
+          position: absolute;
+          border: none;
+          border-radius: 2rem;
+          top: 85%;
+          left: 25%;
+          background-color: $white;
+          cursor: pointer;
+
+          @media (min-width: 920px) {
+            top: 80%;
+            left: 65%;
+          }
+        }
+      }
+      &:hover {
+        background: url("../IMGS/TheMovieDBbg1.svg");
+        background-size: cover;
+        background-position: 40% 25%;
+        background-repeat: no-repeat;
+      }
+    }
+    .project4.darkTheme {
+      background-color: $nordGrey;
+    }
+  }
+  .projects.darkTheme {
+    background-color: $nordDarkerGrey;
+  }
+
+  .javascript {
+    width: 100%;
+    height: 22%;
+    order: 4;
+    //border: 2px solid yellow;
+    background-color: $arcticGrey;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @media (min-width: 500px) {
+      justify-content: space-evenly;
+      height: 34%;
+    }
+    @media (min-width: 920px) {
+      height: 21%;
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    .javascript-project-1 {
+      width: 90%;
+      height: 22%;
+      border-radius: 2rem;
+      margin: 0 0 0 8%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background: url("../IMGS/WormBG.svg");
+      opacity: 0.75;
+      cursor: pointer;
+      background-color: #834e2b;
+
+      @media (min-width: 500px) {
+        width: 60%;
+        height: 27%;
+        margin: 0 0 0 15%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      @media (min-width: 920px) {
+        width: 28%;
+        height: 30%;
+        margin: 0 0 0 0;
+      }
+      @media (min-width: 1100px) {
+        width: 28%;
+        height: 30%;
+        margin: 0 0 0 0;
+      }
+      @media (min-width: 1500px) {
+        width: 28%;
+        height: 40%;
+        margin: 0 0 0 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .javascript-project-2 {
+      width: 90%;
+      height: 22%;
+      border-radius: 2rem;
+      margin: 0 0 0 8%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background: url("../IMGS/PacmanBG.svg");
+      opacity: 0.75;
+      cursor: pointer;
+      background-color: $nordGrey;
+
+      @media (min-width: 500px) {
+        width: 60%;
+        height: 27%;
+        margin: 0 0 0 15%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      @media (min-width: 920px) {
+        width: 28%;
+        height: 30%;
+        margin: 0 0 0 0;
+      }
+      @media (min-width: 1100px) {
+        width: 28%;
+        height: 30%;
+        margin: 0 0 0 0;
+      }
+      @media (min-width: 1500px) {
+        width: 28%;
+        height: 40%;
+        margin: 0 0 0 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .javascript-project-3 {
+      width: 90%;
+      height: 22%;
+      border-radius: 2rem;
+      margin: 0 0 0 8%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background: url("../IMGS/BreakoutBG.svg");
+      opacity: 0.75;
+      cursor: pointer;
+      background-color: $ice;
+
+      @media (min-width: 500px) {
+        width: 60%;
+        height: 27%;
+        margin: 0 0 0 15%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      @media (min-width: 920px) {
+        width: 28%;
+        height: 30%;
+        margin: 0 0 0 0;
+      }
+      @media (min-width: 1100px) {
+        width: 28%;
+        height: 30%;
+        margin: 0 0 0 0;
+      }
+      @media (min-width: 1500px) {
+        width: 28%;
+        height: 40%;
+        margin: 0 0 0 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+    }
+    .wave.darkTheme {
+      path {
+        fill: $nordGrey;
+      }
+    }
+  }
+
+  .javascript.darkTheme {
+    background-color: $nordDarkerGrey;
+  }
+
+  .footer {
+    width: 100%;
+    height: 3%;
+    order: 5;
+    //border: 2px solid red;
+    background-color: $white;
+    position: relative;
+
+    @media (min-width: 500px) {
+      height: 4%;
+    }
+    @media (min-width: 920px) {
+      height: 2%;
+    }
+
+    .footer-contact {
+      width: 8rem;
+      height: 3rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 0.2rem;
+      background-color: $ice;
+      position: absolute;
+      color: $white;
+      top: 5%;
+      left: 2%;
+
+      @media (min-width: 920px) {
+        width: 10rem;
+        height: 3rem;
+        font-weight: 600;
+        top: 10%;
+      }
+    }
+    h3 {
+      color: $lightGreyFont;
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+    #location-icon {
+      position: absolute;
+      top: 50%;
+      left: 2%;
+      color: $greyBlueFont;
+      @media (min-width: 920px) {
+        top: 75%;
+      }
+    }
+    .location {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      i {
+        font-size: 0.9rem;
+
+        @media (min-width: 1100px) {
+          font-size: 1.5rem;
+        }
+        @media (min-width: 1600px) {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (min-width: 920px) {
+        top: 75%;
+        left: 3.5%;
+      }
+    }
+    .copy {
+      position: absolute;
+      top: 40%;
+      left: 1.9%;
+
+      @media (min-width: 920px) {
+        top: 60%;
+      }
+
+      .name {
+        color: $greyBlueFont;
+        font-weight: 500;
+      }
+    }
+    .socials {
+      width: 30%;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      display: flex;
+      justify-content: space-around;
+
+      i {
+        font-size: 1.3rem;
+        color: $lightGreyFont;
+        cursor: pointer;
+        &:hover {
+          color: $ice;
+        }
+        @media (min-width: 1100px) {
+          font-size: 1.4rem;
+        }
+        @media (min-width: 1600px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (min-width: 920px) {
+        width: 15%;
+        justify-content: space-evenly;
+        top: 65%;
+      }
+    }
+  }
+  .footer.darkTheme {
+    background-color: $nordGrey;
+    h3,
+    i {
+      color: $snow;
+    }
+  }
+
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $snow;
+    z-index: 20;
+    display: none;
+
+    .modal {
+      position: absolute;
+      cursor: text;
+      background-color: white;
+      z-index: 15;
+      border-radius: 2vh;
+      width: 100%;
+      height: 90%;
+      // margin: 5% 5%;
+
+      @media (min-width: 920px) {
+        width: 60%;
+        height: 80%;
+        margin: 5% 20%;
+      }
+
+      .modal-img {
+        //border: 2px solid green;
+
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+
+        @media (min-width: 920px) {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 35%;
+        }
+      }
+
+      .modal-exit {
+        width: 3rem;
+        height: 3rem;
+        background: none;
+        outline: none;
+        border: none;
+        position: absolute;
+        cursor: pointer;
+        top: 1%;
+        right: 6%;
+        z-index: 22;
+
+        @media (min-width: 920px) {
+          top: 1%;
+          right: 1%;
+        }
+
+        i {
+          font-size: 2.5rem;
+          color: $snow;
+        }
+      }
+      .modal-title {
+        // border: 2px solid red;
+        position: absolute;
+        color: $darkGreyFont;
+        min-width: 30%;
+        min-height: 5%;
+        font-size: 2rem;
+        top: 45%;
+        left: 5%;
+
+        @media (min-width: 920px) {
+          top: 38%;
+          left: 30%;
+        }
+      }
+
+      .modal-description {
+        // border: 2px solid yellow;
+        position: absolute;
+        padding: 0.5rem 0.5rem;
+        overflow: scroll;
+        color: $darkGreyFont;
+        line-height: 1.5;
+        //font-size: 1.1rem;
+        width: 90%;
+        height: 40%;
+        top: 50%;
+        left: 5%;
+
+        @media (min-width: 920px) {
+          top: 45%;
+          left: 30%;
+          width: 70%;
+        }
+      }
+
+      .modal-aside {
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        top: 20%;
+        left: 0;
+
+        @media (min-width: 920px) {
+          width: 30%;
+          height: 65%;
+          top: 35%;
+          left: 0;
+        }
+
+        .technologies {
+          width: 100%;
+          height: 70%;
+          // border: 2px solid magenta;
+          li {
+            padding: 1rem 0.5rem;
+            list-style: none;
+            float: left;
+            display: block;
+
+            @media (min-width: 920px) {
+            }
+          }
+
+          li a {
+            padding: 0.2rem 0.5rem;
+            color: $darkGreyFont;
+            border: 2px solid $teal;
+            -webkit-box-shadow: 1px 1px 0px 1px #48b0c8;
+            box-shadow: 1px 1px 0px 1px #48b0c8;
+          }
+        }
+
+        .colours-scheme {
+          width: 100%;
+          height: 30%;
+
+          h4 {
+            font-family: "Playball", cursive;
+            padding: 0.5rem 0.5rem;
+            color: $darkGreyFont;
+            font-size: 1.2rem;
+          }
+          .colours {
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-around;
+
+            .colour {
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              background-color: $teal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-container.show {
+    cursor: pointer;
+    display: flex;
+  }
+
+  .demo,
+  .repo {
+    position: absolute;
+    top: 80%;
+    width: 7rem;
+    height: 3rem;
+    font-weight: 600;
+    background-color: $teal;
+    color: $white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    z-index: 20;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    @media (min-width: 920px) {
+      top: 80%;
+    }
+  }
+  .demo {
+    left: 10%;
+
+    @media (min-width: 920px) {
+      left: 50%;
+    }
+  }
+  .repo {
+    left: 40%;
+    @media (min-width: 920px) {
+      left: 70%;
+    }
+  }
+}
